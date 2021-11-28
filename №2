@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <locale.h>
+
+int sign(float x) {
+    if (x < 0) { return -1; }    if (x == 0) { return 0; }    if (x > 0) { return 1; }
+}
+
+int main(void)
+{
+    setlocale(LC_ALL, "Russian");
+    printf("Программа должна описать функцию Sign(X) целого типа, возвращающую для вещественного числа X следующие значения: \n-1, если X < 0; 0, если X = 0; 1, если X > 0.\nС помощью этой функции найти значение выражения Sign(A) + Sign(B) для данных вещественных чисел A и B.\n");
+    float a, b;
+    printf("\nВведите A: ");
+    scanf("%f", &a);
+    printf("\nВведите B: ");
+    scanf("%f", &b);
+
+    printf("\nSign(A) + Sign(B) = %i\n", sign(a) + sign(b));
+}
