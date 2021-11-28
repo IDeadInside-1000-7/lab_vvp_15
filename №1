@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <locale.h>
+void powerA3(float a, float* b)
+{
+    *b = a * a * a;
+}
+
+int main(void)
+{
+    setlocale(LC_ALL, "Russian");
+    printf("Программа должна описать функцию PowerA3(A, B), вычисляющую третью степень числа A и возвращающую ее в переменной B\n(A — входной, B — выходной параметр; оба параметра являются вещественными). \nС помощью этой функции программа найдет третьи степени пяти данных чисел.");
+    int i;
+    for (i = 1; i <= 5; ++i) 
+    {
+        float a;
+        printf("\nВведите A: ");
+        scanf("%f", &a);
+        float b;
+        powerA3(a, &b);
+        printf("B = %f\n", b);
+    }
+}
